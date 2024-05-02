@@ -65,7 +65,7 @@ To set up the Vendor Management System locally, follow these steps:
    ```
 ### Logout
 
-- **Endpoint:** POST /api/logout/
+- **Endpoint:** POST `/api/logout/`
 - **Description:** Endpoint for user logout.
 - **Request Header:** {Authorization 'Bearer ' + 'token_string'}
 - **Notes:** Requires a valid refresh token. Only allows POST requests. Requires authentication.
@@ -88,14 +88,14 @@ To set up the Vendor Management System locally, follow these steps:
 
 ### Retrieve Vendor
 
-- **Endpoint:** GET /api/vendors/{vendor_id}/
+- **Endpoint:** GET `/api/vendors/{vendor_id}/`
 - **Description:** Endpoint for retrieving details of a specific vendor.
 - **Response:** Vendor details
 - **Notes:** Requires authentication.
 
 ### Update Vendor
 
-- **Endpoint:** PUT /api/vendors/{vendor_id}/update/
+- **Endpoint:** PUT `/api/vendors/{vendor_id}/update/`
 - **Description:** Endpoint for updating details of a specific vendor.
 - **Request Body:** Updated vendor data
 - **Response:** Updated vendor details
@@ -103,14 +103,14 @@ To set up the Vendor Management System locally, follow these steps:
 
 ### Delete Vendor
 
-- **Endpoint:** DELETE /api/vendors/{vendor_id}/delete/
+- **Endpoint:** DELETE `/api/vendors/{vendor_id}/delete/`
 - **Description:** Endpoint for deleting a specific vendor.
 - **Response:** Success message
 - **Notes:** Requires authentication.
 
 ### Purchase Order
 
-- **Endpoint:** POST /api/purchase_orders/ (for creating), GET /api/purchase_order/ (for listing)
+- **Endpoint:** POST `/api/purchase_orders/ (for creating), GET /api/purchase_order/ (for listing)`
 - **Description:** Endpoint for creating and listing purchase orders.
 - **Request Body (POST):** Purchase order data
 - **Response (GET):** List of purchase orders
@@ -118,32 +118,32 @@ To set up the Vendor Management System locally, follow these steps:
 
 ### Retrieve Purchase Order
 
-- **Endpoint:** GET /api/purchase_orders/{po_id}/
+- **Endpoint:** GET `/api/purchase_orders/{po_id}/`
 - **Description:** Endpoint for retrieving details of a specific purchase order.
 - **Response:** Purchase order details
 
 ### Update Purchase Order
 
-- **Endpoint:** PUT /api/purchase_order/{po_id}/update/
+- **Endpoint:** PUT `/api/purchase_order/{po_id}/update/`
 - **Description:** Endpoint for updating details of a specific purchase order.
 - **Request Body:** Updated purchase order data
 - **Response:** Updated purchase order details
 
 ### Delete Purchase Order
 
-- **Endpoint:** DELETE /api/purchase_order/{po_id}/delete/
+- **Endpoint:** DELETE `/api/purchase_order/{po_id}/delete/`
 - **Description:** Endpoint for deleting a specific purchase order.
 - **Response:** Success message
 
 ### Retrieve Vendor Performance Metrics
 
-- **Endpoint:** GET /api/vendors/{vendor_id}/performance/
+- **Endpoint:** GET `/api/vendors/{vendor_id}/performance/`
 - **Description:** Endpoint for retrieving performance metrics of a specific vendor.
 - **Response:** Vendor performance metrics
 
 ### Acknowledge Purchase Order
 
-- **Endpoint:** POST /api/purchase_order/{po_id}/acknowledge/
+- **Endpoint:** POST `/api/purchase_order/{po_id}/acknowledge/`
 - **Description:** Endpoint for acknowledging a purchase order.
 - **Response:** Success message
 
