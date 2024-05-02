@@ -147,7 +147,7 @@ To set up the Vendor Management System locally, follow these steps:
 - **Description:** Endpoint for acknowledging a purchase order.
 - **Response:** Success message
 
-### Instructions to Run Test Suite
+## Instructions to Run Test Suite
 1. Prerequisites:
    - Ensure that the project dependencies are installed. You can install them using ```pip install -r requirements.txt```.
 2. Run Tests:
