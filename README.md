@@ -73,7 +73,7 @@ To set up the Vendor Management System locally, follow these steps:
 
 ### Obtain JWT Token
 
-- **Endpoint:** POST /api/token/
+- **Endpoint:** POST /api/login/
 - **Description:** Endpoint for obtaining a JWT token.
 - **Request Body:** { "username": "string", "password": "string" }
 - **Notes:** Only allows POST requests. Does not require authentication.
@@ -147,3 +147,13 @@ To set up the Vendor Management System locally, follow these steps:
 - **Endpoint:** POST /api/purchase_order/{po_id}/acknowledge/
 - **Description:** Endpoint for acknowledging a purchase order.
 - **Response:** Success message
+
+### Instructions to Run Test Suite
+1. Prerequisites:
+   - Ensure that the project dependencies are installed. You can install them using pip install -r requirements.txt.
+2. Run Tests:
+   - Navigate to the project directory in your terminal.
+   - Run the command python manage.py test to execute the test suite.
+3. View Test Results:
+   - After running the tests, review the output in the terminal to see the results of each test case.
+   - Any failed assertions or errors will be displayed in the output,
