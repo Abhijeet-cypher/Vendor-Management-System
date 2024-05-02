@@ -17,9 +17,9 @@ To set up the Vendor Management System locally, follow these steps:
    git clone https://github.com/your_username/vendor-management-system.git
    ```
 2. **Navigate to the project directory:**
-  ```bash
-  cd vendor-management-system
-  ```
+   ```bash
+   cd vendor-management-system
+   ```
 3. **Install dependencies:**
    ```bash
    pip install -r requirements.txt
@@ -32,3 +32,118 @@ To set up the Vendor Management System locally, follow these steps:
    ```bash
    python manage.py test
    ```
+
+# API Documentation
+
+## Signup
+
+### Endpoint:
+- **URL:** `/api/signup/`
+- **Method:** POST
+- **Description:** Endpoint for user registration.
+- **Request Format:**
+  ```json
+  {
+      "username": "string",
+      "password": "string",
+      "email": "string",
+      "first_name": "string",
+      "last_name": "string"
+  }
+  ```
+- **Response Format:**
+   - **Status Code:** 201 Created
+  ```json
+  {
+    "message": "User created successfully"
+  }
+  ```
+  - **Status Code:** 400 Bad Request
+   ```json
+   {
+    "error": "Error details"
+   }
+   ```
+### Logout
+
+- **Endpoint:** POST /api/logout/
+- **Description:** Endpoint for user logout.
+- **Request Header:** {Authorization 'Bearer ' + 'token_string'}
+- **Notes:** Requires a valid refresh token. Only allows POST requests. Requires authentication.
+
+### Obtain JWT Token
+
+- **Endpoint:** POST /api/token/
+- **Description:** Endpoint for obtaining a JWT token.
+- **Request Body:** { "username": "string", "password": "string" }
+- **Notes:** Only allows POST requests. Does not require authentication.
+
+### Vendors List
+
+- **Endpoint:** GET /api/vendors/ (for listing), POST /api/vendors/ (for creating)
+- **Description:** Endpoint for listing vendors and creating a new vendor.
+- **Request Body (POST):** Vendor data
+- **Response (GET):** List of vendors
+- **Response (POST):** Created vendor details
+- **Notes:** Requires authentication.
+
+### Retrieve Vendor
+
+- **Endpoint:** GET /api/vendors/{vendor_id}/
+- **Description:** Endpoint for retrieving details of a specific vendor.
+- **Response:** Vendor details
+- **Notes:** Requires authentication.
+
+### Update Vendor
+
+- **Endpoint:** PUT /api/vendors/{vendor_id}/
+- **Description:** Endpoint for updating details of a specific vendor.
+- **Request Body:** Updated vendor data
+- **Response:** Updated vendor details
+- **Notes:** Requires authentication.
+
+### Delete Vendor
+
+- **Endpoint:** DELETE /api/vendors/{vendor_id}/
+- **Description:** Endpoint for deleting a specific vendor.
+- **Response:** Success message
+- **Notes:** Requires authentication.
+
+### Purchase Order
+
+- **Endpoint:** POST /api/purchase_order/ (for creating), GET /api/purchase_order/ (for listing)
+- **Description:** Endpoint for creating and listing purchase orders.
+- **Request Body (POST):** Purchase order data
+- **Response (GET):** List of purchase orders
+- **Response (POST):** Created purchase order details
+
+### Retrieve Purchase Order
+
+- **Endpoint:** GET /api/purchase_order/{po_id}/
+- **Description:** Endpoint for retrieving details of a specific purchase order.
+- **Response:** Purchase order details
+
+### Update Purchase Order
+
+- **Endpoint:** PUT /api/purchase_order/{po_id}/
+- **Description:** Endpoint for updating details of a specific purchase order.
+- **Request Body:** Updated purchase order data
+- **Response:** Updated purchase order details
+
+### Delete Purchase Order
+
+- **Endpoint:** DELETE /api/purchase_order/{po_id}/
+- **Description:** Endpoint for deleting a specific purchase order.
+- **Response:** Success message
+
+### Retrieve Vendor Performance Metrics
+
+- **Endpoint:** GET /api/vendors/{vendor_id}/performance/
+- **Description:** Endpoint for retrieving performance metrics of a specific vendor.
+- **Response:** Vendor performance metrics
+
+### Acknowledge Purchase Order
+
+- **Endpoint:** POST /api/purchase_order/{po_id}/acknowledge/
+- **Description:** Endpoint for acknowledging a purchase order.
+- **Response:** Success message
