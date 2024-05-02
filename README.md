@@ -37,8 +37,7 @@ To set up the Vendor Management System locally, follow these steps:
 
 ### Signup
 
-### Endpoint:
-- **URL:** `/api/signup/`
+- **Endpoint:** `/api/signup/`
 - **Method:** POST
 - **Description:** Endpoint for user registration.
 - **Request Format:**
