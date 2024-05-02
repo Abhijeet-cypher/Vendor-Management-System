@@ -96,7 +96,7 @@ To set up the Vendor Management System locally, follow these steps:
 
 ### Update Vendor
 
-- **Endpoint:** PUT /api/vendors/{vendor_id}/
+- **Endpoint:** PUT /api/vendors/{vendor_id}/update/
 - **Description:** Endpoint for updating details of a specific vendor.
 - **Request Body:** Updated vendor data
 - **Response:** Updated vendor details
@@ -104,14 +104,14 @@ To set up the Vendor Management System locally, follow these steps:
 
 ### Delete Vendor
 
-- **Endpoint:** DELETE /api/vendors/{vendor_id}/
+- **Endpoint:** DELETE /api/vendors/{vendor_id}/delete/
 - **Description:** Endpoint for deleting a specific vendor.
 - **Response:** Success message
 - **Notes:** Requires authentication.
 
 ### Purchase Order
 
-- **Endpoint:** POST /api/purchase_order/ (for creating), GET /api/purchase_order/ (for listing)
+- **Endpoint:** POST /api/purchase_orders/ (for creating), GET /api/purchase_order/ (for listing)
 - **Description:** Endpoint for creating and listing purchase orders.
 - **Request Body (POST):** Purchase order data
 - **Response (GET):** List of purchase orders
@@ -119,20 +119,20 @@ To set up the Vendor Management System locally, follow these steps:
 
 ### Retrieve Purchase Order
 
-- **Endpoint:** GET /api/purchase_order/{po_id}/
+- **Endpoint:** GET /api/purchase_orders/{po_id}/
 - **Description:** Endpoint for retrieving details of a specific purchase order.
 - **Response:** Purchase order details
 
 ### Update Purchase Order
 
-- **Endpoint:** PUT /api/purchase_order/{po_id}/
+- **Endpoint:** PUT /api/purchase_order/{po_id}/update/
 - **Description:** Endpoint for updating details of a specific purchase order.
 - **Request Body:** Updated purchase order data
 - **Response:** Updated purchase order details
 
 ### Delete Purchase Order
 
-- **Endpoint:** DELETE /api/purchase_order/{po_id}/
+- **Endpoint:** DELETE /api/purchase_order/{po_id}/delete/
 - **Description:** Endpoint for deleting a specific purchase order.
 - **Response:** Success message
 
@@ -150,10 +150,10 @@ To set up the Vendor Management System locally, follow these steps:
 
 ### Instructions to Run Test Suite
 1. Prerequisites:
-   - Ensure that the project dependencies are installed. You can install them using pip install -r requirements.txt.
+   - Ensure that the project dependencies are installed. You can install them using ```pip install -r requirements.txt```.
 2. Run Tests:
    - Navigate to the project directory in your terminal.
-   - Run the command python manage.py test to execute the test suite.
+   - Run the command ``` python manage.py test ``` to execute the test suite.
 3. View Test Results:
    - After running the tests, review the output in the terminal to see the results of each test case.
-   - Any failed assertions or errors will be displayed in the output,
+   - Any failed assertions or errors will be displayed in the output.
